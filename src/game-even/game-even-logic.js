@@ -10,7 +10,7 @@ const gameEven = () => {
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-  for (let i = 1; i <= 3;) {
+  for (let i = 1; i <= 3; ) {
     const num = getRandomInt(1, 100);
 
     const correctAnswer = isEvenNum(num);
