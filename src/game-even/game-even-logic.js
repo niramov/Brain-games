@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import isEvenNum from './isEvenNum';
-import getRandomInt from './getRandomInt';
+import isEvenNum from './isEvenNum.js';
+import getRandomInt from './getRandomInt.js';
 
 const gameEven = () => {
   console.log('Welcome to the Brain Games!');
