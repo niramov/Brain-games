@@ -5,3 +5,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 [![Linter](https://github.com/niramov/frontend-project-lvl1/actions/workflows/node.js.yml/badge.svg)](https://github.com/niramov/frontend-project-lvl1/actions/workflows/node.js.yml)
+
+[![asciicast](https://asciinema.org/a/vbFPpVqmdW8c0m831gbyEwbPO.svg)](https://asciinema.org/a/vbFPpVqmdW8c0m831gbyEwbPO)
