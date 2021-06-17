@@ -20,7 +20,7 @@ const gameGcd = () => {
 
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === correctAnswer) {
+    if (Number(answer) === correctAnswer) {
       console.log('Correct!');
       i += 1;
     } else {
