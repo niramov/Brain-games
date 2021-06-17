@@ -7,3 +7,5 @@
 [![Linter](https://github.com/niramov/frontend-project-lvl1/actions/workflows/node.js.yml/badge.svg)](https://github.com/niramov/frontend-project-lvl1/actions/workflows/node.js.yml)
 
 [![asciicast](https://asciinema.org/a/vbFPpVqmdW8c0m831gbyEwbPO.svg)](https://asciinema.org/a/vbFPpVqmdW8c0m831gbyEwbPO)
+
+[![asciicast](https://asciinema.org/a/a64Z9TFOKgZZVkAuvdELK5dTs.svg)](https://asciinema.org/a/a64Z9TFOKgZZVkAuvdELK5dTs)
