@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import isEvenNum from './isEvenNum.js';
 import getRandomInt from './getRandomInt.js';
 
 const gameCalc = () => {
@@ -11,14 +10,20 @@ const gameCalc = () => {
   console.log('What is the result of the expression?');
 
   for (let i = 1; i <= 3; ) {
-    const num = getRandomInt(1, 100);
+    const operators = ['+', '*', '-'];
 
-    const correctAnswer = isEvenNum(num);
-    console.log(`Question: ${num}`);
+    const num1 = getRandomInt(1, 50);
+    const num2 = getRandomInt(1, 50);
+    const operator = operators[getRandomInt(0, 2)];
 
-    const answer = readlineSync.question('Your answer: ');
+    const expression = `${num1} ${operator} ${num2}`;
 
-    if (answer === isEvenNum(num)) {
+    const correctAnswer = eval(expression);
+    console.log(`Question: ${expression}`);
+
+    const answer = Number(readlineSync.question('Your answer: '));
+
+    if (answer === correctAnswer) {
       console.log('Correct!');
       i += 1;
     } else {
