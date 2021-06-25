@@ -1,25 +1,43 @@
 import readlineSync from 'readline-sync';
-import isEvenNum from './isEvenNum.js';
 import getRandomInt from './getRandomInt.js';
 
-const gameEven = () => {
+const gameProgression = () => {
   console.log('Welcome to the Brain Games!');
 
   const name = readlineSync.question('May i have your name? ');
   console.log(`Hi, ${name}!`);
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('What number is missing in the progression?');
 
   // eslint-disable-next-line space-in-parens
   for (let i = 1; i <= 3; ) {
-    const num = getRandomInt(1, 100);
+    let firstNum = getRandomInt(1, 30);
 
-    const correctAnswer = isEvenNum(num);
-    console.log(`Question: ${num}`);
+    const randomPlusNum = getRandomInt(1, 11);
+
+    const firstArr = [];
+
+    // eslint-disable-next-line space-in-parens
+    for (; firstArr.length <= 9; ) {
+      firstArr.push(firstNum);
+      firstNum += randomPlusNum;
+    }
+
+    const hiddenNum = getRandomInt(1, 10);
+
+    const hiddenSymbol = '..';
+
+    const correctAnswer = String(firstArr[hiddenNum]);
+
+    firstArr[hiddenNum] = hiddenSymbol;
+
+    const newArr = firstArr.join(' ');
+
+    console.log(`Question: ${newArr}`);
 
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === isEvenNum(num)) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
       i += 1;
     } else {
@@ -30,4 +48,4 @@ const gameEven = () => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-export default gameEven;
+export default gameProgression;
