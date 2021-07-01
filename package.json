@@ -10,7 +10,7 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "description": "[![Actions Status](https://github.com/niramov/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/niramov/frontend-project-lvl1/actions)",
+  "description": "Brain games",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/niramov/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Nikita Abramov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/niramov/frontend-project-lvl1/issues"
