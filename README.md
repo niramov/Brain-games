@@ -2,7 +2,7 @@
 
 [![Actions Status](https://github.com/niramov/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/niramov/frontend-project-lvl1/actions)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0d47c733387b72ef363f/maintainability)](https://codeclimate.com/github/niramov/frontend-project-lvl1/maintainability)
 
 [![Linter](https://github.com/niramov/frontend-project-lvl1/actions/workflows/node.js.yml/badge.svg)](https://github.com/niramov/frontend-project-lvl1/actions/workflows/node.js.yml)
 
