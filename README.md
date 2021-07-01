@@ -1,5 +1,11 @@
 ### Hexlet tests and linter status:
 
+## Setup
+
+```sh
+$ make install
+```
+
 [![Actions Status](https://github.com/niramov/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/niramov/frontend-project-lvl1/actions)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/0d47c733387b72ef363f/maintainability)](https://codeclimate.com/github/niramov/frontend-project-lvl1/maintainability)
