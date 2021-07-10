@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import getRandomInt from './getRandomInt.js';
 
-const gameProgression = () => {
+const startGame = () => {
   console.log('Welcome to the Brain Games!');
 
   const name = readlineSync.question('May i have your name? ');
@@ -48,4 +48,4 @@ const gameProgression = () => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-export default gameProgression;
+export default startGame;

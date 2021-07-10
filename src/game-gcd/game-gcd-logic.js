@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomInt from './getRandomInt.js';
 import correctNod from './correctNod.js';
 
-const gameGcd = () => {
+const startGame = () => {
   console.log('Welcome to the Brain Games!');
 
   const name = readlineSync.question('May i have your name? ');
@@ -31,4 +31,4 @@ const gameGcd = () => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-export default gameGcd;
+export default startGame;

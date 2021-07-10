@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import isEvenNum from './isEvenNum.js';
 import getRandomInt from './getRandomInt.js';
 
-const gameEven = () => {
+const startGame = () => {
   console.log('Welcome to the Brain Games!');
 
   const name = readlineSync.question('May i have your name? ');
@@ -30,4 +30,4 @@ const gameEven = () => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-export default gameEven;
+export default startGame;

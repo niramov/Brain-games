@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import isPrimeNum from './isPrimeNum.js';
 import getRandomInt from './getRandomInt.js';
 
-const gamePrime = () => {
+const startGame = () => {
   console.log('Welcome to the Brain Games!');
 
   const name = readlineSync.question('May i have your name? ');
@@ -28,4 +28,4 @@ const gamePrime = () => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-export default gamePrime;
+export default startGame;
