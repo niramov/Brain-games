@@ -2,14 +2,7 @@ import readlineSync from 'readline-sync';
 import isEvenNum from './isEvenNum.js';
 import getRandomInt from './getRandomInt.js';
 
-const startGame = () => {
-  console.log('Welcome to the Brain Games!');
-
-  const name = readlineSync.question('May i have your name? ');
-  console.log(`Hi, ${name}!`);
-
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
+const startGame = (name) => {
   // eslint-disable-next-line space-in-parens
   for (let i = 1; i <= 3; ) {
     const num = getRandomInt(1, 100);
@@ -19,7 +12,7 @@ const startGame = () => {
 
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === isEvenNum(num)) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
       i += 1;
     } else {

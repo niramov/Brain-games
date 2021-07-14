@@ -2,14 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomInt from './getRandomInt.js';
 import correctNod from './correctNod.js';
 
-const startGame = () => {
-  console.log('Welcome to the Brain Games!');
-
-  const name = readlineSync.question('May i have your name? ');
-  console.log(`Hi, ${name}!`);
-
-  console.log('Find the greatest common divisor of given numbers.');
-
+const startGame = (name) => {
   // eslint-disable-next-line space-in-parens
   for (let i = 1; i <= 3; ) {
     const num1 = getRandomInt(1, 100);

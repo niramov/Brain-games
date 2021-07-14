@@ -1,14 +1,7 @@
 import readlineSync from 'readline-sync';
 import getRandomInt from './getRandomInt.js';
 
-const startGame = () => {
-  console.log('Welcome to the Brain Games!');
-
-  const name = readlineSync.question('May i have your name? ');
-  console.log(`Hi, ${name}!`);
-
-  console.log('What number is missing in the progression?');
-
+const gameLogic = (name) => {
   // eslint-disable-next-line space-in-parens
   for (let i = 1; i <= 3; ) {
     let firstNum = getRandomInt(1, 30);
@@ -48,4 +41,4 @@ const startGame = () => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-export default startGame;
+export default gameLogic;
