@@ -9,7 +9,7 @@ const startGame = (name) => {
     const num2 = getRandomInt(1, 100);
 
     const correctAnswer = correctNod(num1, num2);
-    console.log(`Question: ${num1}, ${num2}`);
+    console.log(`Question: ${num1} ${num2}`);
 
     const answer = readlineSync.question('Your answer: ');
 
