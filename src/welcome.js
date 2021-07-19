@@ -6,7 +6,6 @@ const welcome = () => {
   const name = readlineSync.question('May i have your name? ');
   console.log(`Hello, ${name}!`);
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   return name;
 };
 
