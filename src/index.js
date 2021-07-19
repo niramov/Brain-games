@@ -7,9 +7,9 @@ const startGame = (gameDescription, question, correct) => {
 
   // eslint-disable-next-line space-in-parens
   for (let i = 1; i <= 3; ) {
-    const num = question();
+    const value = question();
     const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = correct(num);
+    const correctAnswer = correct(value);
 
     if (answer === correctAnswer) {
       console.log('Correct!');
