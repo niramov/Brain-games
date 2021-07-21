@@ -13,6 +13,9 @@ export const question = () => {
 };
 
 export const correct = (num) => {
+  if (num === 1) {
+    return 'no';
+  }
   for (let i = num - 1; i > 1; i -= 1) {
     if (num % i === 0) {
       return 'no';
