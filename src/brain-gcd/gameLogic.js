@@ -1,27 +1,51 @@
-import readlineSync from 'readline-sync';
-import getRandomInt from './getRandomInt.js';
-import correctNod from './correctNod.js';
+import getRandomInt from '../getRandomInt.js';
 
-const startGame = (name) => {
-  // eslint-disable-next-line space-in-parens
-  for (let i = 1; i <= 3; ) {
-    const num1 = getRandomInt(1, 100);
-    const num2 = getRandomInt(1, 100);
+// eslint-disable-next-line operator-linebreak
+export const gameDescription =
+  'Find the greatest common divisor of given numbers.';
 
-    const correctAnswer = correctNod(num1, num2);
-    console.log(`Question: ${num1} ${num2}`);
+export const question = () => {
+  const num1 = getRandomInt(1, 100);
+  const num2 = getRandomInt(1, 100);
 
-    const answer = readlineSync.question('Your answer: ');
-
-    if (Number(answer) === correctAnswer) {
-      console.log('Correct!');
-      i += 1;
-    } else {
-      return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.
-    Let's try again, ${name}!`);
-    }
-  }
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Question: ${num1} ${num2}`);
+  const numbers = [num1, num2];
+  return numbers;
 };
 
-export default startGame;
+// eslint-disable-next-line consistent-return
+export const correct = (numbers) => {
+  const num1 = numbers[0];
+  const num2 = numbers[1];
+
+  let result;
+
+  if (num1 === num2) {
+    result = String(num2);
+    return result;
+  }
+
+  if (num1 > num2) {
+    if (num1 % num2 === 0) {
+      result = String(num2);
+      return result;
+    }
+    for (let i = num2 - 1; ; i -= 1) {
+      if (num1 % i === 0 && num2 % i === 0) {
+        result = String(i);
+        return result;
+      }
+    }
+  } else if (num2 > num1) {
+    if (num2 % num1 === 0) {
+      result = String(num1);
+      return result;
+    }
+    for (let i = num1 - 1; ; i -= 1) {
+      if (num2 % i === 0 && num1 % i === 0) {
+        result = String(i);
+        return result;
+      }
+    }
+  }
+};

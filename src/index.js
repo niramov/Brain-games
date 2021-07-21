@@ -3,7 +3,7 @@ import welcome from './welcome.js';
 
 const startGame = (gameDescription, question, correct) => {
   const name = welcome();
-  gameDescription();
+  console.log(gameDescription);
 
   // eslint-disable-next-line space-in-parens
   for (let i = 1; i <= 3; ) {

@@ -1,27 +1,22 @@
-import readlineSync from 'readline-sync';
-import isPrimeNum from './isPrimeNum.js';
-import getRandomInt from './getRandomInt.js';
+import getRandomInt from '../getRandomInt.js';
 
-const startGame = (name) => {
-  // eslint-disable-next-line space-in-parens
-  for (let i = 1; i <= 3; ) {
-    const num = getRandomInt(1, 100);
+// eslint-disable-next-line operator-linebreak
+export const gameDescription =
+  'Answer "yes" if the number is prime, otherwise answer "no".';
 
-    const correctAnswer = isPrimeNum(num);
+export const question = () => {
+  const num = getRandomInt(1, 100);
 
-    console.log(`Question: ${num}`);
+  console.log(`Question: ${num}`);
 
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-      i += 1;
-    } else {
-      return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.
-  Let's try again, ${name}!`);
-    }
-  }
-  return console.log(`Congratulations, ${name}!`);
+  return String(num);
 };
 
-export default startGame;
+export const correct = (num) => {
+  for (let i = num - 1; i > 1; i -= 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  }
+  return 'yes';
+};

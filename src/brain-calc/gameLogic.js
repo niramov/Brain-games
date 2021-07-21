@@ -1,8 +1,6 @@
 import getRandomInt from '../getRandomInt.js';
 
-export const gameDescription = () => {
-  console.log('What is the result of the expression?');
-};
+export const gameDescription = 'What is the result of the expression?';
 
 export const question = () => {
   const operators = ['+', '*', '-'];

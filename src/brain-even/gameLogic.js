@@ -1,8 +1,8 @@
 import getRandomInt from '../getRandomInt.js';
 
-export const gameDescription = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-};
+// eslint-disable-next-line operator-linebreak
+export const gameDescription =
+  'Answer "yes" if the number is even, otherwise answer "no".';
 
 export const question = () => {
   const num = getRandomInt(1, 100);
