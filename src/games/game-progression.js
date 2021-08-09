@@ -1,15 +1,17 @@
 import getRandomInt from '../getRandomInt.js';
 
-export const gameDescription = 'What number is missing in the progression?';
+const game = {};
+game.gameDescription = 'What number is missing in the progression?';
 
-export const question = () => {
+const getNewRound = () => {
+  const gameConditions = [];
+
   let firstNum = getRandomInt(1, 30);
 
   const randomPlusNum = getRandomInt(1, 11);
 
   const correctProg = [];
 
-  // eslint-disable-next-line space-in-parens
   for (; correctProg.length <= 9; ) {
     correctProg.push(firstNum);
     firstNum += randomPlusNum;
@@ -17,17 +19,21 @@ export const question = () => {
 
   const hiddenNum = getRandomInt(1, 10);
 
-  const hiddenSymbol = '..';
+  const correctAnswer = String(correctProg[hiddenNum]);
 
-  const correctAnswer = correctProg[hiddenNum];
+  const hiddenSymbol = '..';
 
   correctProg[hiddenNum] = hiddenSymbol;
 
   const newArr = correctProg.join(' ');
 
-  console.log(`Question: ${newArr}`);
+  const question = newArr;
 
-  return correctAnswer;
+  gameConditions.push(question, correctAnswer);
+
+  return gameConditions;
 };
 
-export const correct = (num) => String(num);
+game.getNewRound = getNewRound;
+
+export default game;
