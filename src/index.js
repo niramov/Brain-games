@@ -14,12 +14,13 @@ const play = (game) => {
     const answer = readlineSync.question('Your answer: ');
 
     if (answer !== correctAnswer) {
-      return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.
-      Let's try again, ${name}!`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
     console.log('Correct!');
   }
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default play;

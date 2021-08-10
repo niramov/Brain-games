@@ -12,6 +12,7 @@ const getNewRound = () => {
   const expression = `${num1} ${operator} ${num2}`;
   const question = expression;
   let correctAnswer;
+
   if (operator === '+') {
     correctAnswer = String(num1 + num2);
   } else if (operator === '*') {
