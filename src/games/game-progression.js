@@ -12,7 +12,7 @@ const getNewRound = () => {
 
   const correctProg = [];
 
-  for (; correctProg.length <= 9; ) {
+  for (; correctProg.length <= 9;) {
     correctProg.push(firstNum);
     firstNum += randomPlusNum;
   }

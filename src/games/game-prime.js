@@ -2,8 +2,7 @@ import getRandomInt from '../getRandomInt.js';
 
 // eslint-disable-next-line operator-linebreak
 const game = {};
-game.gameDescription =
-  'Answer "yes" if the number is prime, otherwise answer "no".';
+game.gameDescription = 'Answer "yes" if the number is prime, otherwise answer "no".';
 
 const getNewRound = () => {
   const gameConditions = [];

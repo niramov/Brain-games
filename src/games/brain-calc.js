@@ -11,7 +11,14 @@ const getNewRound = () => {
   const operator = operators[getRandomInt(0, 2)];
   const expression = `${num1} ${operator} ${num2}`;
   const question = expression;
-  const correctAnswer = String(eval(expression));
+  let correctAnswer;
+  if (operator === '+') {
+    correctAnswer = String(num1 + num2);
+  } else if (operator === '*') {
+    correctAnswer = String(num1 * num2);
+  } else {
+    correctAnswer = String(num1 - num2);
+  }
 
   gameConditions.push(question, correctAnswer);
 
