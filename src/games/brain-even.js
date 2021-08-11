@@ -1,6 +1,7 @@
 import getRandomInt from '../getRandomInt.js';
 
 const game = {};
+
 game.gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getNewRound = () => {
