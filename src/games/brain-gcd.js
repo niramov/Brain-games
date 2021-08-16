@@ -1,12 +1,8 @@
-import getRandomInt from '../getRandomInt.js';
+import getRandomInt from '../utilities.js';
 
-// eslint-disable-next-line operator-linebreak
-const game = {};
-game.gameDescription = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getNewRound = () => {
-  const gameConditions = [];
-
   const num1 = getRandomInt(1, 100);
   const num2 = getRandomInt(1, 100);
 
@@ -47,11 +43,8 @@ const getNewRound = () => {
   };
 
   const correctAnswer = getGcd(num1, num2);
-  gameConditions.push(question, correctAnswer);
 
-  return gameConditions;
+  return [question, correctAnswer];
 };
 
-game.getNewRound = getNewRound;
-
-export default game;
+export default { description, getNewRound };

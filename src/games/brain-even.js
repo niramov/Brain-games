@@ -1,11 +1,8 @@
-import getRandomInt from '../getRandomInt.js';
+import getRandomInt from '../utilities.js';
 
-const game = {};
-
-game.gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getNewRound = () => {
-  const gameConditions = [];
   const num = getRandomInt(1, 100);
   const question = num;
 
@@ -19,11 +16,7 @@ const getNewRound = () => {
 
   const correctAnswer = isEven(num);
 
-  gameConditions.push(question, correctAnswer);
-
-  return gameConditions;
+  return [question, correctAnswer];
 };
 
-game.getNewRound = getNewRound;
-
-export default game;
+export default { description, getNewRound };

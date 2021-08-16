@@ -1,11 +1,8 @@
-import getRandomInt from '../getRandomInt.js';
+import getRandomInt from '../utilities.js';
 
-// eslint-disable-next-line operator-linebreak
-const game = {};
-game.gameDescription = 'Answer "yes" if the number is prime, otherwise answer "no".';
+const description = 'Answer "yes" if the number is prime, otherwise answer "no".';
 
 const getNewRound = () => {
-  const gameConditions = [];
   const num = getRandomInt(1, 100);
   const question = num;
 
@@ -21,11 +18,8 @@ const getNewRound = () => {
     return 'yes';
   };
   const correctAnswer = isPrimeNum(num);
-  gameConditions.push(question, correctAnswer);
 
-  return gameConditions;
+  return [question, correctAnswer];
 };
 
-game.getNewRound = getNewRound;
-
-export default game;
+export default { description, getNewRound };

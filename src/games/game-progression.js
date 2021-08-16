@@ -1,11 +1,8 @@
-import getRandomInt from '../getRandomInt.js';
+import getRandomInt from '../utilities.js';
 
-const game = {};
-game.gameDescription = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const getNewRound = () => {
-  const gameConditions = [];
-
   let firstNum = getRandomInt(1, 30);
 
   const randomPlusNum = getRandomInt(1, 11);
@@ -29,11 +26,7 @@ const getNewRound = () => {
 
   const question = newArr;
 
-  gameConditions.push(question, correctAnswer);
-
-  return gameConditions;
+  return [question, correctAnswer];
 };
 
-game.getNewRound = getNewRound;
-
-export default game;
+export default { description, getNewRound };

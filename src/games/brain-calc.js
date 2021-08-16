@@ -1,31 +1,31 @@
-import getRandomInt from '../getRandomInt.js';
+import getRandomInt from '../utilities.js';
 
-const game = {};
-game.gameDescription = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
+
+const operators = ['+', '*', '-'];
 
 const getNewRound = () => {
-  const gameConditions = [];
-  const operators = ['+', '*', '-'];
   const num1 = getRandomInt(1, 50);
   const num2 = getRandomInt(1, 50);
-  const operator = operators[getRandomInt(0, 2)];
-  const expression = `${num1} ${operator} ${num2}`;
-  const question = expression;
-  let correctAnswer;
+  const operator = operators[getRandomInt(0, operators.length - 1)];
+  const question = `${num1} ${operator} ${num2}`;
 
-  if (operator === '+') {
-    correctAnswer = String(num1 + num2);
-  } else if (operator === '*') {
-    correctAnswer = String(num1 * num2);
-  } else {
-    correctAnswer = String(num1 - num2);
-  }
+  const getExpressionValue = (a, b, operation) => {
+    let result;
 
-  gameConditions.push(question, correctAnswer);
+    if (operation === '+') {
+      result = String(a + b);
+    } else if (operation === '*') {
+      result = String(a * b);
+    } else {
+      result = String(a - b);
+    }
+    return result;
+  };
 
-  return gameConditions;
+  const correctAnswer = getExpressionValue(num1, num2, operator);
+
+  return [question, correctAnswer];
 };
 
-game.getNewRound = getNewRound;
-
-export default game;
+export default { description, getNewRound };
