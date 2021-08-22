@@ -2,19 +2,12 @@ import getRandomInt from '../utilities.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const isEven = (number) => number % 2 === 0;
+
 const getNewRound = () => {
-  const num = getRandomInt(1, 100);
-  const question = num;
+  const question = getRandomInt(1, 100);
 
-  const isEven = (x) => {
-    if (x % 2 === 0) {
-      return 'yes';
-    }
-
-    return 'no';
-  };
-
-  const correctAnswer = isEven(num);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };
