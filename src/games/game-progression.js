@@ -2,23 +2,21 @@ import getRandomInt from '../utilities.js';
 
 const description = 'What number is missing in the progression?';
 
-const getProgression = () => {
+const getProgression = (startPosition, progressionStep, progressionLength) => {
   const result = [];
-  const firstNum = getRandomInt(1, 30);
-  const progressionStep = getRandomInt(1, 11);
-  const progressionLength = 9;
 
-  for (let i = firstNum; result.length <= progressionLength; i += progressionStep) {
+  for (let i = startPosition; result.length <= progressionLength; i += progressionStep) {
     result.push(i);
   }
   return result;
 };
 
 const getNewRound = () => {
-  const progression = getProgression();
-
+  const firstNum = getRandomInt(1, 30);
+  const progressionStep = getRandomInt(1, 11);
+  const progressionLength = 9;
+  const progression = getProgression(firstNum, progressionStep, progressionLength);
   const hiddenNum = getRandomInt(1, 10);
-
   const correctAnswer = String(progression[hiddenNum]);
 
   progression[hiddenNum] = '..';
