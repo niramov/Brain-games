@@ -4,7 +4,7 @@ const description = 'What is the result of the expression?';
 
 const operators = ['+', '*', '-'];
 
-const getExpressionValue = (a, b, operation) => {
+const calculate = (a, b, operation) => {
   if (operation === '+') {
     return String(a + b);
   } if (operation === '*') {
@@ -20,7 +20,7 @@ const getNewRound = () => {
   const operator = operators[randomIndex];
   const question = `${num1} ${operator} ${num2}`;
 
-  const correctAnswer = getExpressionValue(num1, num2, operator);
+  const correctAnswer = calculate(num1, num2, operator);
 
   return [question, correctAnswer];
 };
